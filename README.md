@@ -34,11 +34,15 @@ webpack-pwa-manifest
 workbox-webpack-plugin
 html-beautify-webpack-plugin
 
+Update
+```sh
+npm version minor
+```
+
 TODO
 
 remove
 
 - logo
 - servie workeer
-- webpack manifest
 - entry
