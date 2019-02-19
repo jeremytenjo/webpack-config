@@ -32,7 +32,7 @@ module.exports = {
   },
   devtool: 'cheap-module-source-map',
   devServer: {
-    port: wepbackManifest.port,
+    port: wepbackManifest.port || 3001,
     host: wepbackManifest.host,
     compress: true,
     quiet: true,
