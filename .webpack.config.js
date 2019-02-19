@@ -1,16 +1,24 @@
 //Helper Modules
-const path = require('path')
 const chalk = require('chalk')
 
 // Manifest
-const wepbackManifestFile = require('./example/webpackManifest.js')
+const wepbackManifestFile = require(`${process.cwd()}/.webpack.manifest.js`)
 const wepbackManifest = wepbackManifestFile.manifest
 
 //Loaders
 const loaders = require('./loaders/loaders.index')
 
 // Plugins
-const {mini_css_extract_plugin, html_webpack_plugin, favicons_webpack_plugin, webpack_pwa_manifest, html_beautify_webpack_plugin, workbox_webpack_plugin, terser_webpack_plugin, clean_webpack_plugin, webpack_bundle_analyzer
+const {
+  mini_css_extract_plugin,
+  html_webpack_plugin,
+  favicons_webpack_plugin,
+  webpack_pwa_manifest,
+  html_beautify_webpack_plugin,
+  workbox_webpack_plugin,
+  terser_webpack_plugin,
+  clean_webpack_plugin,
+  webpack_bundle_analyzer
 } = require('./plugins/plugins.index')
 
 // Export
@@ -19,7 +27,7 @@ module.exports = {
   output: {
     chunkFilename: 'js/[name].bundle.js',
     filename: 'js/[name].bundle.js',
-    path: path.resolve(__dirname, 'build'),
+    path: `${process.cwd()}/build`,
     publicPath: '/'
   },
   devtool: 'cheap-module-source-map',

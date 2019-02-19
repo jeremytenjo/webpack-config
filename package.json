@@ -1,15 +1,15 @@
 {
-  "name": "webpack-config",
-  "version": "0.2.0",
-  "description": "Webpack Setip",
+  "name": "tenjo-webpack-config",
+  "version": "0.29.0",
+  "description": "Webpack Setup",
   "main": "index.js",
-  "license": "MIT",
+  "license": "ISC",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js --mode development --hot --inline",
-    "build": "webpack --config webpack.config.js --mode production"
+    "test-start": "webpack-dev-server --config ./.webpack.config.js --mode development --hot --inline",
+    "test-build": "webpack --config ./.webpack.config.js --mode production"
   },
-  "devDependencies": {
-    "webpack": "^4.29.5"
+  "bin": {
+    "webpack-scripts": "./.bin/webpack-scripts.js"
   },
   "dependencies": {
     "@babel/core": "^7.3.3",
@@ -28,6 +28,8 @@
     "html-webpack-template": "^6.2.0",
     "mini-css-extract-plugin": "^0.5.0",
     "react": "^16.8.2",
+    "shelljs": "^0.8.3",
+    "webpack": "^4.29.5",
     "webpack-bundle-analyzer": "^3.0.4",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.1.14",

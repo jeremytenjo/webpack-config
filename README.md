@@ -1,10 +1,31 @@
-Packadge JSON:
+Package JSON:
 
+## Installation
+
+add file called `.webpack.manifest.js` to root of folder
+
+```sh
+yarn add tenjo-webpack-config
+```
+
+## Local Dev
+
+```sh
 "scripts": {
 "start": "webpack-dev-server --config webpack/index.js --mode development --hot --inline --open ",
 "build": "webpack --config webpack/index.js --mode production",
 "dev": "webpack-dashboard -- node index.js"
 },
+```
+
+## On Porject add
+
+```sh
+  "scripts": {
+    "start": "npx tenjo-webpack-config start",
+    "build": "npx tenjo-webpack-config build"
+  },
+```
 
 Required Packages:
 babel-core
@@ -35,6 +56,7 @@ workbox-webpack-plugin
 html-beautify-webpack-plugin
 
 Update
+
 ```sh
 npm version minor
 ```
