@@ -1,4 +1,4 @@
-Package JSON:
+#Webpack Config
 
 ## Installation
 
