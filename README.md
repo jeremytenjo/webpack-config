@@ -2,7 +2,13 @@ Package JSON:
 
 ## Installation
 
-add file called `.webpack.manifest.js` to root of folder
+add file called `.webpack.manifest.js` to root
+
+add babelrc.js to root with:
+
+```js
+module.exports = { extends: '/node_modules/tenjo-webpack-config/.babelrc' }
+```
 
 ```sh
 yarn add tenjo-webpack-config
