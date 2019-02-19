@@ -14,17 +14,7 @@ module.exports = { extends: '/node_modules/tenjo-webpack-config/.babelrc' }
 yarn add tenjo-webpack-config
 ```
 
-## Local Dev
-
-```sh
-"scripts": {
-"start": "webpack-dev-server --config webpack/index.js --mode development --hot --inline --open ",
-"build": "webpack --config webpack/index.js --mode production",
-"dev": "webpack-dashboard -- node index.js"
-},
-```
-
-## On Porject add
+## On Project add
 
 ```sh
   "scripts": {
@@ -64,13 +54,5 @@ html-beautify-webpack-plugin
 Update
 
 ```sh
-npm version minor
+yarn publish --minor
 ```
-
-TODO
-
-remove
-
-- logo
-- servie workeer
-- entry
