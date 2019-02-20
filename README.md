@@ -23,6 +23,20 @@ Add to `Package.json`
   },
 ```
 
+## Usage
+
+Start development
+
+```sh
+yarn start
+```
+
+Create Build
+
+```sh
+yarn build
+```
+
 ## All .webpack.manifest.js options
 
 ```js
