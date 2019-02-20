@@ -3,14 +3,14 @@ image: node:latest
 stages:
   - lint
   - deploy
-  
+
 lint:
   stage: lint
   script:
-  - yarn pretty
-  - yarn lint
-  
-publish:  
+    - yarn pretty
+    - yarn lint
+
+publish:
   stage: deploy
   script:
     - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
