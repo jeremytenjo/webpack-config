@@ -1,6 +1,6 @@
 {
   "name": "tenjo-webpack-config",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Webpack Setup",
   "main": "index.js",
   "license": "ISC",
@@ -28,7 +28,7 @@
     "webpack-scripts": "./.bin/webpack-scripts.js"
   },
   "browserslist": [
-    "0.5%",
+    "> 0.5%",
     "last 2 versions",
     "not dead"
   ],
