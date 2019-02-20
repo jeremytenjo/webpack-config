@@ -8,7 +8,8 @@
     "test-start": "webpack-dev-server --config ./.webpack.config.js --mode development --hot --inline",
     "test-build": "webpack --config ./.webpack.config.js --mode production",
     "pretty": "prettier \"**/*.js\" --write",
-    "lint": "eslint ./"
+    "lint": "eslint ./",
+    "publish-minor": "yarn publish --minor"
   },
   "bin": {
     "webpack-scripts": "./.bin/webpack-scripts.js"
