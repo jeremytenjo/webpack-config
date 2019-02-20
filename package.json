@@ -9,12 +9,31 @@
     "test-build": "webpack --config ./.webpack.config.js --mode production",
     "pretty": "prettier \"**/*.js\" --write",
     "lint": "eslint ./",
-    "publish-minor": "yarn publish --minor"
+    "publish-minor": "yarn publish --minor",
+    "check-staged": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix-dry-run",
+      "prettier --list-different",
+      "git add"
+    ]
   },
   "bin": {
     "webpack-scripts": "./.bin/webpack-scripts.js"
   },
-  "browserslist": ["Chrome >= 60", "Safari >= 10.1", "iOS >= 10.3", "Firefox >= 54", "Edge >= 15"],
+  "browserslist": [
+    "Chrome >= 60",
+    "Safari >= 10.1",
+    "iOS >= 10.3",
+    "Firefox >= 54",
+    "Edge >= 15"
+  ],
   "dependencies": {
     "@babel/core": "^7.3.3",
     "@babel/plugin-proposal-class-properties": "^7.3.3",
@@ -39,7 +58,9 @@
     "html-beautify-webpack-plugin": "^1.0.5",
     "html-webpack-plugin": "^3.2.0",
     "html-webpack-template": "^6.2.0",
+    "husky": "^1.3.1",
     "image-webpack-loader": "^4.6.0",
+    "lint-staged": "^8.1.4",
     "mini-css-extract-plugin": "^0.5.0",
     "prettier": "^1.16.4",
     "react": "^16.8.2",
