@@ -1,0 +1,25 @@
+image: node:latest
+
+before_script:  
+  - yarn
+
+cache:  
+  paths:
+    - node_modules/
+    
+stages:
+  - lint
+  - deploy
+  
+lint:
+  stage: lint
+  script:
+  - yarn pretty
+  - yarn lint
+  
+publish:  
+  stage: deploy
+  script:
+    - yarn build
+    - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
+    - npm publish
