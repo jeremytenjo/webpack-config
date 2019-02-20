@@ -1,12 +1,12 @@
 image: node:latest
 
-before_script:  
+before_script:
   - yarn
 
-cache:  
+cache:
   paths:
     - node_modules/
-    
+
 stages:
   - lint
   - deploy
