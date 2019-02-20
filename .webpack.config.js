@@ -1,12 +1,12 @@
 //Helper Modules
-const chalk = require('chalk')
+const chalk = require("chalk");
 
 // Manifest
-const wepbackManifestFile = require(`${process.cwd()}/.webpack.manifest.js`)
-const wepbackManifest = wepbackManifestFile.manifest
+const wepbackManifestFile = require(`${process.cwd()}/.webpack.manifest.js`);
+const wepbackManifest = wepbackManifestFile.manifest;
 
 //Loaders
-const loaders = require('./loaders/loaders.index')
+const loaders = require("./loaders/loaders.index");
 
 // Plugins
 const {
@@ -19,43 +19,45 @@ const {
   terser_webpack_plugin,
   clean_webpack_plugin,
   webpack_bundle_analyzer
-} = require('./plugins/plugins.index')
+} = require("./plugins/plugins.index");
 
 // Export
 module.exports = {
   entry: wepbackManifest.entry,
   output: {
-    chunkFilename: 'js/[name].bundle.js',
-    filename: 'js/[name].bundle.js',
+    chunkFilename: "js/[name].bundle.js",
+    filename: "js/[name].bundle.js",
     path: `${process.cwd()}/build`,
-    publicPath: '/'
+    publicPath: "/"
   },
-  devtool: 'cheap-module-source-map',
+  devtool: "cheap-module-source-map",
   devServer: {
     port: wepbackManifest.port || 3001,
     host: wepbackManifest.host,
     compress: true,
     quiet: true,
     overlay: true,
-    clientLogLevel: 'none',
+    clientLogLevel: "none",
     historyApiFallback: true,
     after: function() {
-      console.clear()
-      console.log(chalk.yellow(`You can now view your app in the browser.`))
-      console.log()
+      console.clear();
+      console.log(chalk.yellow(`You can now view your app in the browser.`));
+      console.log();
       console.log(
-        `  ${chalk.cyanBright('On Your Network:')}  http://${wepbackManifest.host}:${chalk.cyanBright(
-          wepbackManifest.port
-        )}/`
-      )
-      console.log()
-      console.log(chalk.cyan('Note that the development build is not optimized.'))
-      console.log(chalk.cyan(`To create a production build, use yarn build`))
-      console.log()
+        `  ${chalk.cyanBright("On Your Network:")}  http://${
+          wepbackManifest.host
+        }:${chalk.cyanBright(wepbackManifest.port)}/`
+      );
+      console.log();
+      console.log(
+        chalk.cyan("Note that the development build is not optimized.")
+      );
+      console.log(chalk.cyan(`To create a production build, use yarn build`));
+      console.log();
     }
   },
   performance: {
-    hints: process.env.NODE_ENV === 'production' ? 'warning' : false
+    hints: process.env.NODE_ENV === "production" ? "warning" : false
   },
   optimization: {
     minimizer: [terser_webpack_plugin()]
@@ -71,7 +73,8 @@ module.exports = {
       wepbackManifest.projectInfo.description,
       wepbackManifest.theme,
       wepbackManifest.webpack.plugins.html,
-      wepbackManifest.analytics.google.analytics.gAnalyticFunctions.onlyViewsScript
+      wepbackManifest.analytics.google.analytics.gAnalyticFunctions
+        .onlyViewsScript
     ),
     webpack_pwa_manifest(
       wepbackManifest.theme,
@@ -85,4 +88,4 @@ module.exports = {
     workbox_webpack_plugin(wepbackManifest.webpack.plugins.workbox),
     webpack_bundle_analyzer()
   ]
-}
+};

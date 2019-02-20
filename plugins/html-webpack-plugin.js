@@ -1,14 +1,20 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = function(project_name, project_desc, theme, html, googleAnalyticsonlyViewsScript) {
-  const bodyHtmlSnippet = html.bodyHtmlSnippet || ''
+module.exports = function(
+  project_name,
+  project_desc,
+  theme,
+  html,
+  googleAnalyticsonlyViewsScript
+) {
+  const bodyHtmlSnippet = html.bodyHtmlSnippet || "";
 
   return new HtmlWebpackPlugin({
     inject: false,
-    template: require('html-webpack-template'),
-    filename: './index.html',
+    template: require("html-webpack-template"),
+    filename: "./index.html",
     title: project_name,
-    appMountId: 'root',
+    appMountId: "root",
     bodyHtmlSnippet: `${bodyHtmlSnippet}<noscript>You need to enable JavaScript to run this app.</noscript>`,
     headHtmlSnippet: `
      <base href="/"/>
@@ -20,29 +26,30 @@ module.exports = function(project_name, project_desc, theme, html, googleAnalyti
      `,
     meta: [
       {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0',
+        name: "viewport",
+        content:
+          "width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
       },
       {
-        name: 'description',
-        content: project_desc,
+        name: "description",
+        content: project_desc
       },
       {
-        name: 'apple-mobile-web-app-title',
-        content: project_name,
+        name: "apple-mobile-web-app-title",
+        content: project_name
       },
       {
-        name: 'apple-mobile-web-app-status-bar-style',
-        content: theme.colors.primary,
+        name: "apple-mobile-web-app-status-bar-style",
+        content: theme.colors.primary
       },
       {
-        name: 'apple-mobile-web-app-capable',
-        content: 'yes',
+        name: "apple-mobile-web-app-capable",
+        content: "yes"
       },
       {
-        name: 'msapplication-tap-highlight',
-        content: 'no',
-      },
-    ],
-  })
-}
+        name: "msapplication-tap-highlight",
+        content: "no"
+      }
+    ]
+  });
+};

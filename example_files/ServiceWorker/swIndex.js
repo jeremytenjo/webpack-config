@@ -1,3 +1,3 @@
-import swRegister from './swRegister'
+import swRegister from "./swRegister";
 
-export { swRegister }
+export { swRegister };
