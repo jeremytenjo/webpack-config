@@ -1,6 +1,6 @@
 {
   "name": "tenjo-webpack-config",
-  "version": "1.8.0",
+  "version": "2.0.0",
   "description": "Webpack Setup",
   "main": "index.js",
   "license": "ISC",
@@ -18,12 +18,20 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": ["eslint --fix-dry-run", "prettier --list-different", "git add"]
+    "*.{js,jsx}": [
+      "eslint --fix-dry-run",
+      "prettier --list-different",
+      "git add"
+    ]
   },
   "bin": {
     "webpack-scripts": "./.bin/webpack-scripts.js"
   },
-  "browserslist": ["Chrome >= 60", "Safari >= 10.1", "iOS >= 10.3", "Firefox >= 54", "Edge >= 15"],
+  "browserslist": [
+    "0.5%",
+    "last 2 versions",
+    "not dead"
+  ],
   "dependencies": {
     "@babel/core": "^7.3.3",
     "@babel/plugin-proposal-class-properties": "^7.3.3",
