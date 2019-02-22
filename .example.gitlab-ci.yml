@@ -9,16 +9,8 @@ cache:
 
 stages:
   - lint
-  - deploy
 
 lint:
   stage: lint
   script:
     - yarn lint
-
-publish:
-  stage: deploy
-  script:
-    - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
-    - npm version
-    - yarn publish-minor

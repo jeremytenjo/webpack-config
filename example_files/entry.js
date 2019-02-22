@@ -1,4 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-ReactDOM.render(<div style={{ fontSize: 200 }}>Working</div>, document.getElementById('root'))
+import Comp from './testComponent/comp.index'
+ReactDOM.render(<Comp />, document.getElementById('root'))
