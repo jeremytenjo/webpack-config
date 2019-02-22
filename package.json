@@ -1,6 +1,6 @@
 {
   "name": "tenjo-webpack-config",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Webpack Setup",
   "main": "index.js",
   "license": "ISC",
@@ -9,7 +9,7 @@
     "test-build": "webpack --config ./.webpack.config.js --mode production",
     "pretty": "prettier \"**/*.js\" --write",
     "lint": "eslint ./",
-    "publish-minor": "yarn publish --minor",
+    "publish-minor": "yarn lint && yarn publish --minor && gpush",
     "check-staged": "lint-staged"
   },
   "husky": {
