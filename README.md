@@ -78,3 +78,7 @@ exports.manifest = {
   },
 }
 ```
+
+## How it works
+
+The `bin` optin in the `package.json` file has a file named `webpack-scripts` and you call it in the indstalled app by using yarn `webpack-scripts` start/build
