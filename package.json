@@ -4,6 +4,7 @@
   "description": "Webpack Setup",
   "main": "index.js",
   "license": "ISC",
+  "preferGlobal": true,
   "scripts": {
     "test-start": "webpack-dev-server --config ./.webpack.config.js --mode development --hot --inline",
     "test-build": "webpack --config ./.webpack.config.js --mode production",
@@ -19,20 +20,12 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "eslint --fix-dry-run",
-      "prettier --list-different",
-      "git add"
-    ]
+    "*.{js,jsx}": ["eslint --fix-dry-run", "prettier --list-different", "git add"]
   },
   "bin": {
     "webpack-scripts": "./bin/webpack-scripts.js"
   },
-  "browserslist": [
-    "> 0.5%",
-    "last 2 versions",
-    "not dead"
-  ],
+  "browserslist": ["> 0.5%", "last 2 versions", "not dead"],
   "dependencies": {
     "@babel/core": "^7.3.3",
     "@babel/plugin-proposal-class-properties": "^7.3.3",

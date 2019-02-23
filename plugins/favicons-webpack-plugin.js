@@ -1,11 +1,11 @@
-const path = require("path");
-const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+const path = require('path')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = function(logoPath) {
   return new FaviconsWebpackPlugin({
     logo: path.resolve(logoPath),
     persistentCache: false,
-    prefix: "images/public/",
+    prefix: 'images/public/',
     icons: {
       android: false,
       appleIcon: false,
@@ -16,7 +16,7 @@ module.exports = function(logoPath) {
       opengraph: false,
       twitter: false,
       yandex: false,
-      windows: false
-    }
-  });
-};
+      windows: false,
+    },
+  })
+}
