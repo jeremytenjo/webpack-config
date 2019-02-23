@@ -3,9 +3,7 @@
 ## Installation
 
 ```sh
-yarn global add tenjo-webpack-config
-yarn global add webpack
-yarn global add webpack-cli
+yarn add tenjo-webpack-config
 ```
 
 Create `.webpack.manifest.js` to root
@@ -20,8 +18,8 @@ Add to `Package.json`
 
 ```sh
   "scripts": {
-    "start": "webpack-scripts start",
-    "build": "webpack-scripts build",
+    "start": "yarn webpack-scripts start",
+    "build": "yarn webpack-scripts build",
   },
 ```
 
