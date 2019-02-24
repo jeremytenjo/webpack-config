@@ -1,4 +1,9 @@
 module.exports = {
   test: /\.md$/,
-  use: ['markdown-loader'],
+  use: [
+    'html-loader',
+    {
+      loader: 'markdown-loader',
+    },
+  ],
 }
