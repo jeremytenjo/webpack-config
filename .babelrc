@@ -4,14 +4,8 @@
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-object-rest-spread",
     "@babel/plugin-syntax-throw-expressions",
-    ["@babel/plugin-proposal-decorators", { "legacy": true }],
     ["@babel/plugin-proposal-class-properties", { "loose": true }],
-    [
-      "@babel/plugin-transform-runtime",
-      {
-        "regenerator": true
-      }
-    ],
+    "@babel/plugin-transform-runtime",
     "babel-plugin-styled-components"
   ]
 }
