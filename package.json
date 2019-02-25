@@ -1,6 +1,6 @@
 {
-  "name": "@tenjo/tenjo-webpack-config",
-  "version": "2.15.0",
+  "name": "@tenjo/webpack-config",
+  "version": "2.16.0",
   "description": "Webpack Setup",
   "main": "index.js",
   "license": "ISC",
