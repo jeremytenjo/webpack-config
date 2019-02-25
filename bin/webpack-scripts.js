@@ -3,7 +3,7 @@
 const shell = require('shelljs')
 
 const action = process.argv[2]
-const configFilePath = `${process.cwd()}/node_modules/tenjo-webpack-config/.webpack.config.js`
+const configFilePath = `${process.cwd()}/node_modules/@tenjo/webpack-config/.webpack.config.js`
 const startCommand = `webpack-dev-server --config ${configFilePath} --mode development --hot --inline`
 const buildCommand = `webpack --config ${configFilePath} --mode production`
 
