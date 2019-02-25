@@ -3,7 +3,7 @@
 ## Installation
 
 ```sh
-yarn add @tenjo/tenjo-webpack-config
+yarn add @tenjo/webpack-config
 ```
 
 Create `.webpack.manifest.js` to root
