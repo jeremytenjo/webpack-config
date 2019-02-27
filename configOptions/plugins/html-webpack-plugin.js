@@ -1,7 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-module.exports = function(project_name, project_desc, theme, html, googleAnalyticsonlyViewsScript) {
+module.exports = function(project_name, project_desc, theme, html, _googleAnalyticsonlyViewsScript) {
   const bodyHtmlSnippet = html.bodyHtmlSnippet || ''
+  const googleAnalyticsonlyViewsScript = _googleAnalyticsonlyViewsScript || ''
 
   return new HtmlWebpackPlugin({
     inject: false,
