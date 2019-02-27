@@ -4,4 +4,8 @@ const fonts = require('./loader.fonts')
 const images = require('./loader.images')
 const md = require('./loader.md')
 
-module.exports = [js_jsx, css, md, fonts, images]
+const rules = [js_jsx, css, md, fonts, images]
+
+module.exports = {
+  rules,
+}

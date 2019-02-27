@@ -1,5 +1,5 @@
 # Build
 /build/*
-/example_files/ServiceWorker/sw.js
+/tests/ServiceWorker/sw.js
 /node_modules/*
 

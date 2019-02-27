@@ -1,15 +1,13 @@
+// Vendors
 const localIp = require('get-my-local-ip')
 
 exports.manifest = {
-  port: 3001,
-  host: localIp.address,
-  entry: './example_files/entry.js',
   projectInfo: {
-    name: 'Webapp',
-    shortName: 'Webapp',
-    description: 'Webapp Template',
+    name: 'Webpack Config',
+    shortName: 'Webpack',
+    description: 'Webpack Config',
     logo: {
-      path: 'example_files/logo.png',
+      path: 'tests/logo.png',
     },
   },
   analytics: {
@@ -24,12 +22,17 @@ exports.manifest = {
     },
   },
   webpack: {
+    devServer: {
+      port: 3001,
+      host: localIp.address,
+    },
+    entry: './tests/entry.js',
     plugins: {
       html: {
         bodyHtmlSnippet: '',
       },
       workbox: {
-        swSrc: './example_files/ServiceWorker/sw.js',
+        swSrc: './tests/ServiceWorker/sw.js',
         swDest: 'sw.js',
       },
     },

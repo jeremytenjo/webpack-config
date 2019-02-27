@@ -20,6 +20,7 @@ Add to `Package.json`
   "scripts": {
     "start": "yarn webpack-scripts start",
     "build": "yarn webpack-scripts build",
+    "analyze": "yarn webpack-scripts analyze",
   },
 ```
 
@@ -37,21 +38,24 @@ Create Build
 yarn build
 ```
 
-## All .webpack.manifest.js options
+Analyze Build bundle
+
+```sh
+yarn analyze
+```
+
+## .webpack.manifest.js options example
 
 ```js
 const localIp = require('get-my-local-ip')
 
 exports.manifest = {
-  port: 3001,
-  host: localIp.address,
-  entry: './example_files/entry.js',
   projectInfo: {
-    name: 'Webapp',
-    shortName: 'Webapp',
-    description: 'Webapp Template',
+    name: 'Webpack Config',
+    shortName: 'Webpack',
+    description: 'Webpack Config',
     logo: {
-      path: 'example_files/logo.png',
+      path: 'tests/logo.png',
     },
   },
   analytics: {
@@ -66,12 +70,17 @@ exports.manifest = {
     },
   },
   webpack: {
+    devServer: {
+      port: 3001,
+      host: localIp.address,
+    },
+    entry: './tests/entry.js',
     plugins: {
       html: {
         bodyHtmlSnippet: '',
       },
       workbox: {
-        swSrc: './example_files/ServiceWorker/sw.js',
+        swSrc: './tests/ServiceWorker/sw.js',
         swDest: 'sw.js',
       },
     },
@@ -79,6 +88,6 @@ exports.manifest = {
 }
 ```
 
-## How it works
+### How it works
 
-The `bin` optin in the `package.json` file has a file named `webpack-scripts` and you call it in the indstalled app by using yarn `webpack-scripts` start/build
+The `bin` option in the `package.json` file has a file named `webpack-scripts` and you call it in the installed app by using `yarn webpack-scripts start/build`
