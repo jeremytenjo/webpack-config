@@ -9,6 +9,7 @@ const clean_webpack_plugin = require('./clean-webpack-plugin.js')
 const webpack_bundle_analyzer = require('./webpack-bundle-analyzer.js')
 const optimize_css_assets_webpack_plugin = require('./optimize-css-assets-webpack-plugin.js')
 const compression_webpack_plugin = require('./compression-webpack-plugin.js')
+const robotstxt_webpack_plugin = require('./robotstxt-webpack-plugin.js')
 
 module.exports = (webpackManifest) => [
   clean_webpack_plugin(),
@@ -32,5 +33,6 @@ module.exports = (webpackManifest) => [
   html_beautify_webpack_plugin(),
   workbox_webpack_plugin(webpackManifest.webpack.plugins.workbox),
   webpack_bundle_analyzer(),
+  robotstxt_webpack_plugin(webpackManifest),
   compression_webpack_plugin(),
 ]
