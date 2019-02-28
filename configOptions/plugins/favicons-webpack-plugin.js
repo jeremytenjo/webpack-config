@@ -1,9 +1,14 @@
-const path = require('path')
+const dirPath = require('path')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
-module.exports = function(logoPath) {
+module.exports = function(webpackManifest) {
+  const {
+    projectInfo: {
+      logo: { path },
+    },
+  } = webpackManifest
   return new FaviconsWebpackPlugin({
-    logo: path.resolve(logoPath),
+    logo: dirPath.resolve(path),
     persistentCache: false,
     prefix: 'images/public/',
     icons: {

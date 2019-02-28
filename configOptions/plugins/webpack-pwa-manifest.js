@@ -1,23 +1,35 @@
-const path = require('path')
+const dirPath = require('path')
 const WebpackPwaManifest = require('webpack-pwa-manifest')
 
-module.exports = function(theme, project_name, project_desc, project_short_name, project_logo) {
+module.exports = (webpackManifest) => {
+  const {
+    theme: {
+      colors: { background, primary },
+    },
+    projectInfo: {
+      name = 'Project Name',
+      description = 'Project description',
+      shortName = 'Project shortName',
+      logo: { path },
+    },
+  } = webpackManifest
+
   return new WebpackPwaManifest({
     fingerprints: false,
-    name: project_name,
-    short_name: project_short_name,
-    description: project_desc,
-    background_color: theme.colors.background,
-    theme_color: theme.colors.primary,
+    name,
+    short_name: shortName,
+    description,
+    background_color: background,
+    theme_color: primary,
     orientation: 'portrait',
     scope: '/',
     start_url: '/',
     display: 'standalone',
     icons: [
       {
-        src: path.resolve(project_logo.path),
+        src: dirPath.resolve(path),
         sizes: [92, 152, 180, 167, 192, 512],
-        destination: path.join('images', 'public'),
+        destination: dirPath.join('images', 'public'),
       },
     ],
   })

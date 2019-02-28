@@ -1,14 +1,30 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-module.exports = function(project_name, project_desc, theme, html, _googleAnalyticsonlyViewsScript) {
-  const bodyHtmlSnippet = html.bodyHtmlSnippet || ''
-  const googleAnalyticsonlyViewsScript = _googleAnalyticsonlyViewsScript || ''
+module.exports = (webpackManifest) => {
+  const {
+    theme: {
+      colors: { primary },
+    },
+    projectInfo: { name = '', description = '' },
+    webpack: {
+      plugins: {
+        html: { bodyHtmlSnippet = '' },
+      },
+    },
+    analytics: {
+      google: {
+        analytics: {
+          gAnalyticFunctions: { onlyViewsScript = '' },
+        },
+      },
+    },
+  } = webpackManifest
 
   return new HtmlWebpackPlugin({
     inject: false,
     template: require('html-webpack-template'),
     filename: './index.html',
-    title: project_name,
+    title: name,
     appMountId: 'root',
     bodyHtmlSnippet: `${bodyHtmlSnippet}<noscript>You need to enable JavaScript to run this app.</noscript>`,
     headHtmlSnippet: `
@@ -17,7 +33,7 @@ module.exports = function(project_name, project_desc, theme, html, _googleAnalyt
      <link rel="apple-touch-icon" sizes="152x152" href="images/public/icon_152x152.png">
      <link rel="apple-touch-icon" sizes="180x180" href="images/public/icon_180x180.png">
      <link rel="apple-touch-icon" sizes="167x167" href="images/public/icon_167x167.png">
-     ${googleAnalyticsonlyViewsScript}
+     ${onlyViewsScript}
      `,
     meta: [
       {
@@ -26,15 +42,15 @@ module.exports = function(project_name, project_desc, theme, html, _googleAnalyt
       },
       {
         name: 'description',
-        content: project_desc,
+        content: description,
       },
       {
         name: 'apple-mobile-web-app-title',
-        content: project_name,
+        content: name,
       },
       {
         name: 'apple-mobile-web-app-status-bar-style',
-        content: theme.colors.primary,
+        content: primary,
       },
       {
         name: 'apple-mobile-web-app-capable',

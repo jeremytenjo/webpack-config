@@ -1,9 +1,13 @@
 const workboxPlugin = require('workbox-webpack-plugin')
 
-module.exports = function({ ...values }) {
-  return new workboxPlugin.InjectManifest({
-    ...values,
-  })
+module.exports = (webpackManifest) => {
+  const {
+    webpack: {
+      plugins: { workbox },
+    },
+  } = webpackManifest
+
+  return new workboxPlugin.InjectManifest(workbox)
 }
 
 // TODO add types

@@ -1,6 +1,6 @@
 const TidyHtmlWebpackPlugin = require('html-beautify-webpack-plugin')
 
-module.exports = function() {
+module.exports = () => {
   return new TidyHtmlWebpackPlugin({
     config: {
       html: {

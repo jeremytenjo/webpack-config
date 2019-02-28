@@ -11,27 +11,16 @@ const optimize_css_assets_webpack_plugin = require('./optimize-css-assets-webpac
 const compression_webpack_plugin = require('./compression-webpack-plugin.js')
 const robotstxt_webpack_plugin = require('./robotstxt-webpack-plugin.js')
 
+// *Order Matters
 module.exports = (webpackManifest) => [
   clean_webpack_plugin(),
   mini_css_extract_plugin(),
   optimize_css_assets_webpack_plugin(),
-  html_webpack_plugin(
-    webpackManifest.projectInfo.name,
-    webpackManifest.projectInfo.description,
-    webpackManifest.theme,
-    webpackManifest.webpack.plugins.html,
-    webpackManifest.analytics.google.analytics.gAnalyticFunctions.onlyViewsScript,
-  ),
-  webpack_pwa_manifest(
-    webpackManifest.theme,
-    webpackManifest.projectInfo.name,
-    webpackManifest.projectInfo.description,
-    webpackManifest.projectInfo.shortName,
-    webpackManifest.projectInfo.logo,
-  ),
-  favicons_webpack_plugin(webpackManifest.projectInfo.logo.path),
+  html_webpack_plugin(webpackManifest),
+  webpack_pwa_manifest(webpackManifest),
+  favicons_webpack_plugin(webpackManifest),
   html_beautify_webpack_plugin(),
-  workbox_webpack_plugin(webpackManifest.webpack.plugins.workbox),
+  workbox_webpack_plugin(webpackManifest),
   webpack_bundle_analyzer(),
   robotstxt_webpack_plugin(webpackManifest),
   compression_webpack_plugin(),
