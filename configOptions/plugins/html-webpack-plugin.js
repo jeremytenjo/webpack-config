@@ -13,9 +13,7 @@ module.exports = (webpackManifest) => {
     },
     analytics: {
       google: {
-        analytics: {
-          gAnalyticFunctions: { onlyViewsScript = '' },
-        },
+        analytics: { gAnalyticFunctions: { onlyViewsScript = '' } = '' },
       },
     },
   } = webpackManifest
