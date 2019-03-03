@@ -1,7 +1,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const devMode = process.env.NODE_ENV !== 'production'
+const isDev = process.env.NODE_ENV === 'development'
 
 module.exports = {
   test: /\.css$/,
-  use: [devMode ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader'],
+  use: [isDev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader'],
 }

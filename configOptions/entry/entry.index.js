@@ -1,5 +1,5 @@
 module.exports = (webpackManifest) => {
-  let entry = './index.js'
+  let entry = './src/index.js'
   const {
     webpack: { entry: customEntry },
   } = webpackManifest
