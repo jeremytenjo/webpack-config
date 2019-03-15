@@ -38,10 +38,26 @@ Create Build
 yarn build
 ```
 
-Analyze Build bundle
+Analyze Build
 
 ```sh
 yarn analyze
+```
+
+## For Libraries
+
+Add to `Package.json`
+
+```sh
+  "scripts": {    
+    "build:library": "yarn webpack-scripts build:library"
+  },
+```
+
+Analyze Build bundle
+
+```sh
+yarn build:library
 ```
 
 ## .webpack.manifest.js options example
@@ -83,6 +99,20 @@ exports.manifest = {
         swSrc: './tests/ServiceWorker/sw.js',
         swDest: 'sw.js',
       },
+    },
+  },
+}
+```
+
+## .webpack.manifest.js options for a `Library` example
+
+```js
+exports.manifest = {
+  webpack: {
+    entry: './features/index.js',
+    output: {
+      filename: 'index.js',
+      libraryTarget: 'commonjs2',
     },
   },
 }

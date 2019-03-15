@@ -1,6 +1,6 @@
 module.exports = (webpackManifest) => {
   const {
-    webpack: { output },
+    webpack: { output = null },
   } = webpackManifest
   const defaultOutput = {
     chunkFilename: 'js/[name].bundle.js',
@@ -8,6 +8,11 @@ module.exports = (webpackManifest) => {
     path: `${process.cwd()}/build`,
     publicPath: '/',
   }
+  let merged = null
 
-  return output ? output : defaultOutput
+  if (output) {
+    merged = { ...defaultOutput, ...output }
+  }
+
+  return merged ? merged : defaultOutput
 }
