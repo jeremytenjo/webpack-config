@@ -44,22 +44,6 @@ Analyze Build
 yarn analyze
 ```
 
-## For Libraries
-
-Add to `Package.json`
-
-```sh
-  "scripts": {
-    "build:library": "yarn webpack-scripts build:library"
-  },
-```
-
-Analyze Build bundle
-
-```sh
-yarn build:library
-```
-
 ## .webpack.manifest.js options example
 
 ```js
@@ -102,6 +86,22 @@ exports.manifest = {
     },
   },
 }
+```
+
+## For Libraries
+
+Add to `Package.json`
+
+```sh
+  "scripts": {
+    "build:library": "yarn webpack-scripts build:library"
+  },
+```
+
+Build Library
+
+```sh
+yarn build:library
 ```
 
 ## .webpack.manifest.js options for a `Library` example
