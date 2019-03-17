@@ -14,8 +14,9 @@
   "homepage": "https://gitlab.com/Tenjo/webpack-config#readme",
   "scripts": {
     "start": "webpack-dev-server --config ./configs/config.project.js --mode development --hot --inline",
-    "build": "webpack --config ./configs/config.project.js --mode production",
-    "build:analyze": "webpack --config ./configs/config.project.js --mode production && webpack-bundle-analyzer --port 4200 build/stats.json",
+    "build": "webpack --config ./configs/config.project.js -p",
+    "build:library": "webpack --config ./configs/config.library.js -p",
+    "build:analyze": "webpack --config ./configs/config.project.js -p && webpack-bundle-analyzer --port 4200 build/stats.json",
     "pretty": "prettier \"**/*.js\" --write",
     "lint": "eslint ./",
     "test": "jest",
@@ -29,20 +30,12 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "eslint --fix-dry-run",
-      "prettier --list-different",
-      "git add"
-    ]
+    "*.{js,jsx}": ["eslint --fix-dry-run", "prettier --list-different", "git add"]
   },
   "bin": {
     "webpack-scripts": "./bin/webpack-scripts.js"
   },
-  "browserslist": [
-    "> 0.5%",
-    "last 2 versions",
-    "not dead"
-  ],
+  "browserslist": ["> 0.5%", "last 2 versions", "not dead"],
   "devDependencies": {
     "@tenjo/eslint-config": "^0.7.0"
   },
