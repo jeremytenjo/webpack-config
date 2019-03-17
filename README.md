@@ -104,22 +104,10 @@ Build Library
 yarn build:library
 ```
 
-Add `babelrc`
+Add to a `babelrc` file
 
 ```js
-{
-  "presets": ["@babel/preset-env", "@babel/preset-react"],
-  "plugins": [
-    "@babel/plugin-transform-regenerator",
-    "@babel/plugin-syntax-dynamic-import",
-    "@babel/plugin-proposal-object-rest-spread",
-    "@babel/plugin-transform-modules-commonjs",
-    "@babel/plugin-syntax-throw-expressions",
-    ["@babel/plugin-proposal-class-properties", { "loose": true }],
-    "@babel/plugin-transform-runtime",
-    "babel-plugin-styled-components"
-  ]
-}
+{ "extends": "./node_modules/@tenjo/webpack-config/.babelrc" }
 ```
 
 ### .webpack.manifest.js options for a `Library` example
