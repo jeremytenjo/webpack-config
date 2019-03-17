@@ -24,7 +24,7 @@ Add to `Package.json`
   },
 ```
 
-## Usage
+## Usage with project
 
 Start development
 
@@ -44,7 +44,7 @@ Analyze Build
 yarn analyze
 ```
 
-## .webpack.manifest.js options example
+### .webpack.manifest.js options example
 
 ```js
 const localIp = require('get-my-local-ip')
@@ -88,7 +88,7 @@ exports.manifest = {
 }
 ```
 
-## For Libraries
+## Usage with Libraries
 
 Add to `Package.json`
 
@@ -104,7 +104,25 @@ Build Library
 yarn build:library
 ```
 
-## .webpack.manifest.js options for a `Library` example
+Add `babelrc`
+
+```js
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "plugins": [
+    "@babel/plugin-transform-regenerator",
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-transform-modules-commonjs",
+    "@babel/plugin-syntax-throw-expressions",
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    "@babel/plugin-transform-runtime",
+    "babel-plugin-styled-components"
+  ]
+}
+```
+
+### .webpack.manifest.js options for a `Library` example
 
 ```js
 exports.manifest = {
@@ -118,6 +136,6 @@ exports.manifest = {
 }
 ```
 
-### How it works
+#### How it works
 
 The `bin` option in the `package.json` file has a file named `webpack-scripts` and you call it in the installed app by using `yarn webpack-scripts start/build`

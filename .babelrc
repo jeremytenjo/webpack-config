@@ -4,7 +4,6 @@
     "@babel/plugin-transform-regenerator",
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-object-rest-spread",
-    "@babel/plugin-transform-modules-commonjs",
     "@babel/plugin-syntax-throw-expressions",
     ["@babel/plugin-proposal-class-properties", { "loose": true }],
     "@babel/plugin-transform-runtime",
