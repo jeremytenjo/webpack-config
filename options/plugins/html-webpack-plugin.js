@@ -3,9 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = (webpackManifest) => {
   const {
     theme: {
-      colors: { primary },
+      colors: { primary = '' },
     },
-    projectInfo: { name = '', description = '' },
+    projectInfo: { name = 'Default Name', description = '' },
     webpack: {
       plugins: {
         html: { bodyHtmlSnippet = '' },

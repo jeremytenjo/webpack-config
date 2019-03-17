@@ -44,12 +44,12 @@ Analyze Build
 yarn analyze
 ```
 
-## For Libraries
+## For Libraries NOT WORKING
 
 Add to `Package.json`
 
 ```sh
-  "scripts": {    
+  "scripts": {
     "build:library": "yarn webpack-scripts build:library"
   },
 ```
