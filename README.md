@@ -44,7 +44,7 @@ Analyze Build
 yarn analyze
 ```
 
-## For Libraries NOT WORKING
+## For Libraries
 
 Add to `Package.json`
 
