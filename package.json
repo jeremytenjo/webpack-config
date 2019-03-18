@@ -1,6 +1,6 @@
 {
   "name": "@tenjo/webpack-config",
-  "version": "3.28.0",
+  "version": "3.29.0",
   "description": "Webpack Setup",
   "license": "ISC",
   "repository": {
@@ -45,8 +45,7 @@
     "not dead"
   ],
   "devDependencies": {
-    "@tenjo/eslint-config": "^0.7.0",
-    "extract-css-chunks-webpack-plugin": "^4.0.1"
+    "@tenjo/eslint-config": "^0.7.0"
   },
   "dependencies": {
     "@babel/core": "^7.3.3",
@@ -73,6 +72,7 @@
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.0.2",
+    "extract-css-chunks-webpack-plugin": "^4.0.1",
     "favicons-webpack-plugin": "^0.0.9",
     "file-loader": "^3.0.1",
     "get-my-local-ip": "^0.1.16",
