@@ -3,9 +3,7 @@ const WebpackPwaManifest = require('webpack-pwa-manifest')
 
 module.exports = (webpackManifest) => {
   const {
-    theme: {
-      colors: { background, primary },
-    },
+    colors: { background, primary },
     projectInfo: {
       name = 'Project Name',
       description = 'Project description',

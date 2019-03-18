@@ -15,11 +15,9 @@ exports.manifest = {
       analytics: { gAnalyticFunctions: { onlyViewsScript: '' } },
     },
   },
-  theme: {
-    colors: {
-      Primary: '#6200ee',
-      Secondary: '#b3f8fc',
-    },
+  colors: {
+    Primary: '#6200ee',
+    Secondary: '#b3f8fc',
   },
   webpack: {
     devServer: {
