@@ -10,6 +10,16 @@ module.exports = (webpackManifest) => {
 
   return {
     minimizer: [terser_webpack_plugin()],
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: 'styles',
+          test: /\.css$/,
+          chunks: 'all',
+          enforce: true,
+        },
+      },
+    },
     ...optimizationOptions,
   }
 }
