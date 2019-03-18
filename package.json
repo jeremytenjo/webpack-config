@@ -18,7 +18,7 @@
     "build:library": "webpack --config ./configs/config.library.js -p",
     "build:analyze": "webpack --config ./configs/config.project.js -p && webpack-bundle-analyzer --port 4200 build/stats.json",
     "deploy": "yarn lint && yarn test && yarn publish --minor && gpush",
-    "publish:mayor": "yarn lint && yarn test && yarn publish --mayor && gpush",
+    "publish:mayor": "yarn publish --mayor && gpush",
     "pretty": "prettier \"**/*.js\" --write",
     "lint": "eslint ./",
     "test": "jest",
@@ -30,20 +30,12 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "eslint --fix-dry-run",
-      "prettier --list-different",
-      "git add"
-    ]
+    "*.{js,jsx}": ["eslint --fix-dry-run", "prettier --list-different", "git add"]
   },
   "bin": {
     "webpack-scripts": "./bin/webpack-scripts.js"
   },
-  "browserslist": [
-    "> 0.5%",
-    "last 2 versions",
-    "not dead"
-  ],
+  "browserslist": ["> 0.5%", "last 2 versions", "not dead"],
   "devDependencies": {
     "@tenjo/eslint-config": "^0.7.0"
   },
