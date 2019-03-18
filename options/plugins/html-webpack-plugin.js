@@ -2,8 +2,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = (webpackManifest) => {
   const {
-    colors: { primary = '' },
-    projectInfo: { name = 'Default Name', description = '' },
+    projectInfo: {
+      name = 'Default Name',
+      description = '',
+      colors: { primary },
+    },
     webpack: {
       plugins: {
         html: { bodyHtmlSnippet = '' },

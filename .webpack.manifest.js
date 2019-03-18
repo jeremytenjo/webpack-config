@@ -6,6 +6,10 @@ exports.manifest = {
     name: 'Webpack Config',
     shortName: 'Webpack',
     description: 'Webpack Config',
+    colors: {
+      primary: '#6200ee',
+      background: '#6200ee',
+    },
     logo: {
       path: 'tests/logo.png',
     },
@@ -14,10 +18,6 @@ exports.manifest = {
     google: {
       analytics: { gAnalyticFunctions: { onlyViewsScript: '' } },
     },
-  },
-  colors: {
-    Primary: '#6200ee',
-    Secondary: '#b3f8fc',
   },
   webpack: {
     devServer: {
