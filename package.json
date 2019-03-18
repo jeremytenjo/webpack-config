@@ -1,6 +1,6 @@
 {
   "name": "@tenjo/webpack-config",
-  "version": "3.26.0",
+  "version": "3.27.0",
   "description": "Webpack Setup",
   "license": "ISC",
   "repository": {
@@ -45,7 +45,8 @@
     "not dead"
   ],
   "devDependencies": {
-    "@tenjo/eslint-config": "^0.7.0"
+    "@tenjo/eslint-config": "^0.7.0",
+    "extract-css-chunks-webpack-plugin": "^4.0.1"
   },
   "dependencies": {
     "@babel/core": "^7.3.3",
