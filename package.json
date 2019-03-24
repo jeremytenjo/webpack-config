@@ -1,6 +1,6 @@
 {
   "name": "@tenjo/webpack-config",
-  "version": "3.30.0",
+  "version": "3.31.0",
   "description": "Webpack Setup",
   "license": "ISC",
   "repository": {
@@ -30,12 +30,20 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": ["eslint --fix-dry-run", "prettier --list-different", "git add"]
+    "*.{js,jsx}": [
+      "eslint --fix-dry-run",
+      "prettier --list-different",
+      "git add"
+    ]
   },
   "bin": {
     "webpack-scripts": "./bin/webpack-scripts.js"
   },
-  "browserslist": ["> 0.5%", "last 2 versions", "not dead"],
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ],
   "devDependencies": {
     "@tenjo/eslint-config": "^0.7.0"
   },
