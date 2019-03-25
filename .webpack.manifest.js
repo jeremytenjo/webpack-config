@@ -28,6 +28,21 @@ exports.manifest = {
     plugins: {
       html: {
         bodyHtmlSnippet: '',
+        headCss: `
+           <style type="text/css">
+           .accordion-btn {
+             width: 100%;
+             text-align: center;
+             font-size: 18px;
+             cursor: pointer;
+             color: #444;
+             background-color: #ADD8E6;
+             padding: 19px;
+             outline: none;
+             border: none;
+             border-radius: 10px;
+           }
+           </style>`,
       },
       workbox: {
         swSrc: './tests/ServiceWorker/sw.js',
