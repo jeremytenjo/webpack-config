@@ -8,13 +8,14 @@ const workbox_webpack_plugin = require('./workbox-webpack-plugin.js')
 const clean_webpack_plugin = require('./clean-webpack-plugin.js')
 const webpack_bundle_analyzer = require('./webpack-bundle-analyzer.js')
 const optimize_css_assets_webpack_plugin = require('./optimize-css-assets-webpack-plugin.js')
-const compression_webpack_plugin = require('./compression-webpack-plugin.js')
+const brotli_webpack_plugin = require('./brotli-webpack-plugin.js')
 const robotstxt_webpack_plugin = require('./robotstxt-webpack-plugin.js')
+const html_webpack_plugin_remove = require('./html-webpack-plugin-remove')
 
-// *Order Matters
+// Order Matters
 module.exports = (webpackManifest) => [
   clean_webpack_plugin(),
-  mini_css_extract_plugin(),
+  mini_css_extract_plugin(webpackManifest),
   optimize_css_assets_webpack_plugin(),
   html_webpack_plugin(webpackManifest),
   webpack_pwa_manifest(webpackManifest),
@@ -23,5 +24,6 @@ module.exports = (webpackManifest) => [
   workbox_webpack_plugin(webpackManifest),
   webpack_bundle_analyzer(),
   robotstxt_webpack_plugin(webpackManifest),
-  compression_webpack_plugin(),
+  html_webpack_plugin_remove(),
+  brotli_webpack_plugin(),
 ]

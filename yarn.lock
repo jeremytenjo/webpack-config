@@ -4800,6 +4800,11 @@ html-minifier@^3.2.3, html-minifier@^3.5.8:
     relateurl "0.2.x"
     uglify-js "3.4.x"
 
+html-webpack-plugin-remove@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/html-webpack-plugin-remove/-/html-webpack-plugin-remove-0.1.0.tgz#a9164a5e119385d8e0ca136cfdff78d40757541c"
+  integrity sha512-Jsoh/D51DxLJtuYSyrsInVY98rP2Ik2+K2AYNb7GReAEpmDQZg/c1n+3N4FaVob73nF2Z9FGupIAUiyJwxdarw==
+
 html-webpack-plugin@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-3.2.0.tgz#b01abbd723acaaa7b37b6af4492ebda03d9dd37b"

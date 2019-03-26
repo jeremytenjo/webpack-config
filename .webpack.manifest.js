@@ -28,6 +28,7 @@ exports.manifest = {
     plugins: {
       html: {
         bodyHtmlSnippet: '',
+        cssBundlePath: 'css/main.bundle.css',
         headCss: `
            <style type="text/css">
            .accordion-btn {
