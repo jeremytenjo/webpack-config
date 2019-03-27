@@ -1,8 +1,5 @@
-module.exports = (webpackManifest) => {
-  const {
-    webpack: { devtool },
-  } = webpackManifest
-  const defaultDevtool = 'cheap-module-source-map'
+const isDev = process.env.NODE_ENV === 'development'
 
-  return devtool ? devtool : defaultDevtool
+module.exports = () => {
+  return isDev ? 'inline-source-map' : 'source-map'
 }

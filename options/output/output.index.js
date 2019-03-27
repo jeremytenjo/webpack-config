@@ -3,8 +3,8 @@ module.exports = (webpackManifest) => {
     webpack: { output = null },
   } = webpackManifest
   const defaultOutput = {
-    chunkFilename: 'js/[name].bundle.js',
-    filename: 'js/[name].bundle.js',
+    chunkFilename: 'js/[name].[chunkhash].js',
+    filename: 'js/[name].[hash].js',
     path: `${process.cwd()}/build`,
     publicPath: '/',
   }

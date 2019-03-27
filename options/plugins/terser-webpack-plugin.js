@@ -1,10 +1,15 @@
 const TerserPlugin = require('terser-webpack-plugin')
 
+const isDev = process.env.NODE_ENV === 'development'
+
 module.exports = () =>
-  new TerserPlugin({
-    terserOptions: {
-      output: {
-        comments: false,
-      },
-    },
-  })
+  isDev
+    ? null
+    : new TerserPlugin({
+        terserOptions: {
+          output: {
+            comments: false,
+          },
+          parallel: true,
+        },
+      })
