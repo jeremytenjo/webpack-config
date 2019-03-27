@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <%= htmlWebpackPlugin.options.headHtmlSnippet %>
+  </head>
+  <body>
+    <div id="<%= htmlWebpackPlugin.options.appMountId %>">
+      <%= htmlWebpackPlugin.options.bodyHtmlSnippet %>
+    </div>
+  </body>
+</html>

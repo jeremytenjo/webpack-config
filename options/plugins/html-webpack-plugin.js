@@ -22,7 +22,7 @@ module.exports = (webpackManifest) => {
   return new HtmlWebpackPlugin({
     inject: 'head',
     title: name,
-    template: __dirname + 'template.html',
+    template: `${__dirname}/template.html`,
     appMountId: 'root',
     bodyHtmlSnippet: `${bodyHtmlSnippet}<noscript>You need to enable JavaScript to run this app.</noscript>`,
     headHtmlSnippet: `
