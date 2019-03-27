@@ -20,7 +20,7 @@ module.exports = (webpackManifest) => {
   } = webpackManifest
 
   return new HtmlWebpackPlugin({
-    inject: 'head',
+    // inject: 'head',
     title: name,
     template: `${__dirname}/template.html`,
     appMountId: 'root',
