@@ -40,7 +40,7 @@ module.exports = (webpackManifest) => {
      <link rel="preload" href="/${cssBundlePath}" as="style" onload="this.onload=null;this.rel='stylesheet'">
      <noscript><link rel="stylesheet" href="/${cssBundlePath}"></noscript>
      ${headCss}
+     ${onlyViewsScript}
      `,
   })
 }
-// ${onlyViewsScript}
