@@ -24,7 +24,7 @@ module.exports = (webpackManifest) => {
     title: name,
     template: `${__dirname}/template.html`,
     appMountId: 'root',
-    bodyHtmlSnippet: `<noscript>You need to enable JavaScript to run this app.</noscript>`,
+    bodyHtmlSnippet: `<noscript>You need to enable JavaScript to run this app.</noscript>${bodyHtmlSnippet}`,
     headHtmlSnippet: `
     <base href="/"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
