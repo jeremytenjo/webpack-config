@@ -34,7 +34,7 @@ module.exports = (webpackManifest) => {
 		 <meta name="apple-mobile-web-app-status-bar-style" content="${primary}">
 		 <meta name="apple-mobile-web-app-capable" content="yes">
 	   <meta name="msapplication-tap-highlight" content="no">
-     <base href="/"/>
+     <base href="/">
      <link rel="apple-touch-icon" href="images/public/icon_152x152.png">
      <link rel="apple-touch-icon" sizes="152x152" href="images/public/icon_152x152.png">
      <link rel="apple-touch-icon" sizes="180x180" href="images/public/icon_180x180.png">
