@@ -125,3 +125,38 @@ exports.manifest = {
 #### How it works
 
 The `bin` option in the `package.json` file has a file named `webpack-scripts` and you call it in the installed app by using `yarn webpack-scripts start/build`
+
+
+## Bundle Performance Checklist
+
+### Compression
+
+- Brotli
+
+### HTML
+
+- Minify
+- Remove comment
+- Remove new lines
+- Remove whitespaces
+
+### Javascript
+
+- Code split pages
+- minify bundle
+- Add js tag to head with defer attribute
+
+### CSS
+
+- preload css
+- add critical css to header
+
+### Images
+
+- Convert images to Webp
+
+### Fonts
+
+- use WOFF2 format
+- preload fonts
+- download font to use locally
