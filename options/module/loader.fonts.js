@@ -1,12 +1,10 @@
 module.exports = {
-  test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+  test: /\.(ttf|eot|woff|woff2)$/,
   use: [
     {
       loader: 'file-loader',
       options: {
-        name: '[name].[ext]',
-        outputPath: 'fonts/',
-        publicPath: 'fonts/',
+        name: 'fonts/[name].[ext]',
       },
     },
   ],
