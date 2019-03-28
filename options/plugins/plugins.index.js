@@ -12,7 +12,6 @@ const brotli_webpack_plugin = require('./brotli-webpack-plugin.js')
 const robotstxt_webpack_plugin = require('./robotstxt-webpack-plugin.js')
 const html_webpack_exclude_assets_plugin = require('./html-webpack-exclude-assets-plugin')
 const script_ext_html_webpack_plugin = require('./script-ext-html-webpack-plugin')
-const preload_webpack_plugin = require('./preload-webpack-plugin')
 
 // Order Matters
 module.exports = (webpackManifest) => [
@@ -21,7 +20,6 @@ module.exports = (webpackManifest) => [
   optimize_css_assets_webpack_plugin(),
   html_webpack_plugin(webpackManifest),
   html_webpack_exclude_assets_plugin(),
-  preload_webpack_plugin(),
   script_ext_html_webpack_plugin(),
   webpack_pwa_manifest(webpackManifest),
   favicons_webpack_plugin(webpackManifest),
