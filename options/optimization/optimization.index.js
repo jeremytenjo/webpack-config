@@ -1,4 +1,5 @@
 const terser_webpack_plugin = require('../plugins/terser-webpack-plugin')
+const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = (webpackManifest) => {
   let defaultOptimizationOptions = {}
@@ -8,8 +9,10 @@ module.exports = (webpackManifest) => {
 
   const optimizationOptions = optimization ? optimization : defaultOptimizationOptions
 
-  return {
-    minimizer: [terser_webpack_plugin()],
-    ...optimizationOptions,
-  }
+  return isProd
+    ? {
+        minimizer: [terser_webpack_plugin()],
+        ...optimizationOptions,
+      }
+    : {}
 }

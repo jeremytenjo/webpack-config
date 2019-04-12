@@ -1,11 +1,9 @@
 const TerserPlugin = require('terser-webpack-plugin')
 
-const isDev = process.env.NODE_ENV === 'development'
-
-module.exports = () =>
-  isDev
-    ? null
-    : new TerserPlugin({
+module.exports = (mode) => {
+  const isProd = mode === 'production'
+  return isProd
+    ? new TerserPlugin({
         terserOptions: {
           output: {
             comments: false,
@@ -13,3 +11,5 @@ module.exports = () =>
           parallel: true,
         },
       })
+    : null
+}

@@ -1,13 +1,15 @@
 const workboxPlugin = require('workbox-webpack-plugin')
 
-module.exports = (webpackManifest) => {
+module.exports = (webpackManifest, mode) => {
+  const isProd = mode === 'production'
+
   const {
     webpack: {
       plugins: { workbox },
     },
   } = webpackManifest
 
-  return new workboxPlugin.InjectManifest(workbox)
+  return isProd ? new workboxPlugin.InjectManifest(workbox) : () => null
 }
 
 // TODO add types

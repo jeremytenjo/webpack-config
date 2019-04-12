@@ -44,6 +44,24 @@ Analyze Build
 yarn analyze
 ```
 
+### Add hot module reloading (HMR)
+
+Install:
+
+```sh
+yarn add react-hot-loader
+```
+
+Add to index component, replace `IndexComp` as nessesary:
+
+```js
+import { hot } from 'react-hot-loader/root'
+const IndexComp = () => {}
+export default hot(IndexComp)
+```
+
+Reference: https://github.com/gaearon/react-hot-loader
+
 ### .webpack.manifest.js options example
 
 ```js

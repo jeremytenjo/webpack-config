@@ -1,5 +1,6 @@
 // Vendors
 var nodeExternals = require('webpack-node-externals')
+
 // Manifest
 const { manifest: webpackManifest } = require(`${process.cwd()}/.webpack.manifest.js`)
 // Entry

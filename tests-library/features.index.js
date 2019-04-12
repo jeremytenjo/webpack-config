@@ -1,3 +1,3 @@
-import Button from './Misc/Button/Button.index'
+import Button from './Button.index'
 
 export { Button }

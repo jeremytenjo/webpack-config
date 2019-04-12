@@ -22,16 +22,19 @@ const optimization = getOptimization(webpackManifest)
 const modules = require('../options/module/module.index')
 // Plugins
 const getPlugins = require('../options/plugins/plugins.index')
-const plugins = getPlugins(webpackManifest)
 
 // Export
-module.exports = {
-  entry,
-  output,
-  devtool,
-  devServer,
-  performance,
-  optimization,
-  module: modules,
-  plugins,
+module.exports = (env, argv) => {
+  const { mode } = argv
+
+  return {
+    entry,
+    output,
+    devtool,
+    devServer,
+    performance,
+    optimization,
+    module: modules,
+    plugins: getPlugins(webpackManifest, mode),
+  }
 }
