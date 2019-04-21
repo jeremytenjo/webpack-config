@@ -12,6 +12,7 @@ module.exports = (webpackManifest, mode) => {
       shortName = 'Project shortName',
       colors: { background, primary },
       logo: { path },
+      share_target = {},
     },
   } = webpackManifest
 
@@ -27,16 +28,7 @@ module.exports = (webpackManifest, mode) => {
         scope: '/',
         start_url: '/',
         display: 'standalone',
-        share_target: {
-          action: '/share-target/',
-          method: 'GET',
-          enctype: 'application/x-www-form-urlencoded',
-          params: {
-            title: 'title',
-            text: 'text',
-            url: 'url',
-          },
-        },
+        share_target,
         icons: [
           {
             src: dirPath.resolve(path),
