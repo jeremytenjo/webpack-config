@@ -20,6 +20,7 @@ module.exports = (webpackManifest) => {
   } = webpackManifest
 
   return new HtmlWebpackPlugin({
+    chunksSortMode: 'none',
     excludeAssets: [/.css$/],
     template: `${__dirname}/template.html`,
     filename: './index.html',
