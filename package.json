@@ -1,6 +1,6 @@
 {
   "name": "@tenjo/webpack-config",
-  "version": "3.73.0",
+  "version": "3.74.0",
   "description": "Webpack Setup",
   "license": "ISC",
   "repository": {
