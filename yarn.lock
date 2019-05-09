@@ -931,10 +931,10 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
   integrity sha512-ONhaKPIufzzrlNbqtWFFd+jlnemX6lJAgq9ZeiZtS7I1PIf/la7CW4m83rTXRnVnsMbW2k56pGYu7AUFJD9Pow==
 
-"@tenjo/eslint-config@^0.17.0":
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/@tenjo/eslint-config/-/eslint-config-0.17.0.tgz#ab352fbb138ae63b362263195539dffc46e634b8"
-  integrity sha512-a41Sfkb5gZfFMo9QTuoApc83hqE5ZSwPAouwHA6U4bu8G5vJrQLI9B68NuQG9K51ybfBCeeySwjcUqCOnKfYdg==
+"@tenjo/eslint-config@^0.18.0":
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/@tenjo/eslint-config/-/eslint-config-0.18.0.tgz#0e08ce33ddfdeb0c57455a21b6edb1ecc27f09bd"
+  integrity sha512-BkdGBkBJ3sRKEK7DspI3opHIgshbxZsk9L9nQywYmbyFQaYRXDbSQskmqPlhuOAcp16Y/tlzA94sUXNzJmFctQ==
   dependencies:
     eslint "^5.14.1"
     eslint-config-react-app "^3.0.7"
