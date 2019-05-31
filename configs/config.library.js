@@ -1,6 +1,7 @@
 // Vendors
 var nodeExternals = require('webpack-node-externals')
 
+const mini_css_extract_plugin = require('../options/plugins/mini-css-extract-plugin')
 // Manifest
 const { manifest: webpackManifest } = require(`${process.cwd()}/.webpack.manifest.js`)
 // Entry
@@ -26,4 +27,5 @@ module.exports = {
   optimization,
   module: modules,
   externals: [nodeExternals()],
+  plugins: [mini_css_extract_plugin({ plugins: {} })],
 }

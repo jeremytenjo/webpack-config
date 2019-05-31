@@ -1,14 +1,14 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-module.exports = (webpackManifest) => {
-  const {
-    webpack: {
-      plugins: {
-        html: { cssBundlePath = 'css/main.bundle.css' },
-      },
-    },
-  } = webpackManifest
+module.exports = () => {
+  // const {
+  //   webpack: {
+  //     plugins: {
+  //       html: { cssBundlePath = 'css/main.bundle.css' },
+  //     },
+  //   },
+  // } = webpackManifest
   return new MiniCssExtractPlugin({
-    filename: cssBundlePath,
+    filename: 'css/main.bundle.css',
   })
 }
