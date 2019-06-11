@@ -140,10 +140,9 @@ exports.manifest = {
 }
 ```
 
-#### How it works
+#### How it works - Specs
 
 The `bin` option in the `package.json` file has a file named `webpack-scripts` and you call it in the installed app by using `yarn webpack-scripts start/build`
-
 
 ## Bundle Performance Checklist
 
