@@ -1,4 +1,3 @@
-// Vendors
 const localIp = require('get-my-local-ip')
 
 exports.manifest = {
@@ -11,7 +10,7 @@ exports.manifest = {
       background: '#6200ee',
     },
     logo: {
-      path: 'tests/logo.png',
+      path: './examples/react/logo.png',
     },
   },
   analytics: {
@@ -24,29 +23,20 @@ exports.manifest = {
       port: 3001,
       host: localIp.address,
     },
-    entry: './tests/entry.js',
+    entry: './examples/react/index',
     plugins: {
       html: {
         bodyHtmlSnippet: '',
         cssBundlePath: 'css/main.bundle.css',
         headCss: `
            <style type="text/css">
-           .accordion-btn {
-             width: 100%;
-             text-align: center;
-             font-size: 18px;
-             cursor: pointer;
-             color: #444;
-             background-color: #ADD8E6;
-             padding: 19px;
-             outline: none;
-             border: none;
-             border-radius: 10px;
+           body {       
+             background-color: #ADD8E6;            
            }
            </style>`,
       },
       workbox: {
-        swSrc: './tests/ServiceWorker/sw.js',
+        swSrc: './examples/react/ServiceWorker/sw',
         swDest: 'sw.js',
       },
     },
