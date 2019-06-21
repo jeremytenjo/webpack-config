@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+require('offline-plugin/runtime').install()
 
 import './body.css'
 import './span.css'

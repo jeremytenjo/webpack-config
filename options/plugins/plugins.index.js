@@ -10,6 +10,7 @@ const optimize_css_assets_webpack_plugin = require('./optimize-css-assets-webpac
 const brotli_webpack_plugin = require('./brotli-webpack-plugin.js')
 const robotstxt_webpack_plugin = require('./robotstxt-webpack-plugin.js')
 const script_ext_html_webpack_plugin = require('./script-ext-html-webpack-plugin')
+const offline_public = require('./offline-plugin')
 
 // Order Matters
 module.exports = (webpackManifest, mode) => [
@@ -21,8 +22,9 @@ module.exports = (webpackManifest, mode) => [
   webpack_pwa_manifest(webpackManifest, mode),
   // favicons_webpack_plugin(webpackManifest, mode),
   // html_beautify_webpack_plugin(mode),
-  workbox_webpack_plugin(webpackManifest, mode),
+  // workbox_webpack_plugin(webpackManifest, mode),
   webpack_bundle_analyzer(mode),
   robotstxt_webpack_plugin(webpackManifest, mode),
   brotli_webpack_plugin(mode),
+  offline_public(mode),
 ]
