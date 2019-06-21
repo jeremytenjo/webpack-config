@@ -1,9 +1,9 @@
-const TidyHtmlWebpackPlugin = require('html-beautify-webpack-plugin')
+const HtmlBeautifyPlugin = require('html-beautify-webpack-plugin')
 
 module.exports = (mode) => {
   const isProd = mode === 'production'
   return isProd
-    ? new TidyHtmlWebpackPlugin({
+    ? new HtmlBeautifyPlugin({
         config: {
           html: {
             end_with_newline: true,

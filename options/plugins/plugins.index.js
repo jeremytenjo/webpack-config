@@ -1,4 +1,3 @@
-// Plugins
 const mini_css_extract_plugin = require('./mini-css-extract-plugin.js')
 const html_webpack_plugin = require('./html-webpack-plugin.js')
 const favicons_webpack_plugin = require('./favicons-webpack-plugin.js')
@@ -20,8 +19,8 @@ module.exports = (webpackManifest, mode) => [
   html_webpack_plugin(webpackManifest, mode),
   script_ext_html_webpack_plugin(mode),
   webpack_pwa_manifest(webpackManifest, mode),
-  favicons_webpack_plugin(webpackManifest, mode),
-  html_beautify_webpack_plugin(mode),
+  // favicons_webpack_plugin(webpackManifest, mode),
+  // html_beautify_webpack_plugin(mode),
   workbox_webpack_plugin(webpackManifest, mode),
   webpack_bundle_analyzer(mode),
   robotstxt_webpack_plugin(webpackManifest, mode),
