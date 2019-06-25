@@ -20,7 +20,7 @@ Add to `Package.json`
   "scripts": {
     "start": "yarn webpack-scripts start",
     "build": "yarn webpack-scripts build",
-    "build-analyze": "yarn webpack-scripts build && yarn webpack-scripts analyze",
+    "build:analyze": "yarn webpack-scripts build && yarn webpack-scripts analyze",
   },
 ```
 
