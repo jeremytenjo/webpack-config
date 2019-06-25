@@ -1,3 +1,3 @@
 module.exports = {
-  extends: '@tenjo/eslint-config',
+  extends: '@tenjojeremy/eslint-config',
 }
