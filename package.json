@@ -1,6 +1,6 @@
 {
   "name": "@tenjojeremy/webpack-config",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "description": "Webpack Setup",
   "license": "ISC",
   "repository": {
@@ -31,12 +31,20 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": ["eslint --fix-dry-run", "prettier --list-different", "git add"]
+    "*.{js,jsx}": [
+      "eslint --fix-dry-run",
+      "prettier --list-different",
+      "git add"
+    ]
   },
   "bin": {
     "webpack-scripts": "./bin/webpack-scripts.js"
   },
-  "browserslist": ["> 0.5%", "last 2 versions", "not dead"],
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ],
   "sideEffects": false,
   "dependencies": {
     "@babel/core": "^7.5.0",
