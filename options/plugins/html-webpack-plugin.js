@@ -30,6 +30,7 @@ module.exports = (webpackManifest) => {
      <meta charset="utf-8" />
 		 <title>${name}</title>
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+     <meta name="theme-color" content="${primary}">
 		 <meta name="description" content="${description}">
 		 <meta name="apple-mobile-web-app-title" content="${name}">
 		 <meta name="apple-mobile-web-app-status-bar-style" content="${primary}">
