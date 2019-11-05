@@ -1,5 +1,5 @@
 // Manifest
-const { manifest: webpackManifest } = require(`${process.cwd()}/.webpack.manifest.js`)
+const webpackManifest = require(`${process.cwd()}/.webpack.manifest.js`)
 // Entry
 const getEntry = require('../options/entry/entry.index')
 const entry = getEntry(webpackManifest)
