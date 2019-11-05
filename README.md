@@ -11,7 +11,7 @@ Create `.webpack.manifest.js` to root
 Create `.babelrc.js` to root with:
 
 ```js
-module.exports = { extends: '/node_modules/@tenjojeremy/webpack-config/.babelrc' }
+module.exports = { extends: './node_modules/@tenjojeremy/webpack-config/.babelrc' }
 ```
 
 Add to `Package.json`
