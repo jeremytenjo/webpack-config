@@ -1,6 +1,6 @@
 const localIp = require('get-my-local-ip')
 
-exports.manifest = {
+module.exports = {
   projectInfo: {
     name: 'Webpack Config',
     shortName: 'Webpack',
