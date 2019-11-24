@@ -15,7 +15,6 @@
   "scripts": {
     "start": "webpack-scripts start",
     "build": "webpack-scripts build",
-    "build:library": "webpack --config ./configs/config.library.js -p",
     "build:analyze": "webpack --config ./configs/config.project.js -p && webpack-bundle-analyzer --port 4200 build/stats.json",
     "deploy:firebase": "yarn build && firebase deploy",
     "deploy": "yarn publish --minor && gpush",

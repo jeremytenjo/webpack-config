@@ -109,12 +109,6 @@ Add to `Package.json`
   },
 ```
 
-Build Library
-
-```sh
-yarn build:library
-```
-
 Add to a `babelrc` file
 
 ```js
