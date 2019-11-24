@@ -13,8 +13,8 @@
   },
   "homepage": "https://gitlab.com/Tenjo/webpack-config#readme",
   "scripts": {
-    "start": "webpack-dev-server --config ./configs/config.project.js --mode development --hot --inline --manifestPath .webpack.manifest.js",
-    "build": "webpack --config ./configs/config.project.js -p",
+    "start": "webpack-scripts start",
+    "build": "webpack-scripts build",
     "build:library": "webpack --config ./configs/config.library.js -p",
     "build:analyze": "webpack --config ./configs/config.project.js -p && webpack-bundle-analyzer --port 4200 build/stats.json",
     "deploy:firebase": "yarn build && firebase deploy",
