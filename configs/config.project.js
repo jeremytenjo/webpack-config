@@ -2,7 +2,7 @@ module.exports = (env, argv) => {
   const { mode, manifestPath } = argv
 
   // Manifest
-  const webpackManifest = require(`${process.cwd()}/${manifestPath}`)
+  const webpackManifest = require(manifestPath)
   // Entry
   const getEntry = require('../options/entry/entry.index')
   const entry = getEntry(webpackManifest)
