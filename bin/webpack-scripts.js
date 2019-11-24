@@ -7,9 +7,9 @@ const wappRoot = require('./utils/getModulePath')
 // Project
 const action = process.argv[2]
 const manifestPath = process.argv[3] || `${process.cwd()}/.webpack.manifest.js`
-const configFilePath = `${wappRoot('configs')}/config.project.js`
+const configFilePath = wappRoot('bin/configs/config.project.js')
 const startCommand = `webpack-dev-server --config ${configFilePath} --mode development --hot --inline --manifestPath ${manifestPath}`
-const buildCommand = `webpack --config ${configFilePath} -p`
+const buildCommand = `webpack --config ${configFilePath} -p --manifestPath ${manifestPath}`
 const analyzeCommand = `webpack-bundle-analyzer --port 4200 ${process.cwd()}/build/stats.json`
 
 switch (action) {

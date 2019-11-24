@@ -1,5 +1,5 @@
 module.exports = (env, argv) => {
-  const { mode, manifestPath = '.webpack.manifest.js' } = argv
+  const { mode, manifestPath } = argv
 
   // Manifest
   const webpackManifest = require(manifestPath)
