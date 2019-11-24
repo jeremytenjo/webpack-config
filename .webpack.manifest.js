@@ -13,11 +13,6 @@ module.exports = {
       path: './examples/react/logo.png',
     },
   },
-  analytics: {
-    google: {
-      analytics: { gAnalyticFunctions: { onlyViewsScript: '' } },
-    },
-  },
   webpack: {
     devServer: {
       port: 3001,
