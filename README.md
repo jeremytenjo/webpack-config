@@ -99,36 +99,6 @@ exports.manifest = {
 }
 ```
 
-## Usage with Libraries
-
-Add to `Package.json`
-
-```sh
-  "scripts": {
-    "build:library": "yarn webpack-scripts build:library"
-  },
-```
-
-Add to a `babelrc` file
-
-```js
-{ "extends": "./node_modules/@tenjo/webpack-config/.babelrc" }
-```
-
-### .webpack.manifest.js options for a `Library` example
-
-```js
-exports.manifest = {
-  webpack: {
-    entry: './features/index.js',
-    output: {
-      filename: 'index.js',
-      libraryTarget: 'commonjs2',
-    },
-  },
-}
-```
-
 #### How it works - Specs
 
 The `bin` option in the `package.json` file has a file named `webpack-scripts` and you call it in the installed app by using `yarn webpack-scripts start/build`
