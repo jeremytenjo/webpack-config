@@ -13,6 +13,7 @@ module.exports = (webpackManifest) => {
       share_target = {},
     },
   } = webpackManifest
+  const logoPath = `${path}/logo.png`
 
   return new WebpackPwaManifest({
     fingerprints: false,
@@ -28,7 +29,7 @@ module.exports = (webpackManifest) => {
     share_target,
     icons: [
       {
-        src: dirPath.resolve(path),
+        src: dirPath.resolve(logoPath),
         sizes: [92, 152, 180, 167, 192, 512],
         destination: dirPath.join('images', 'public'),
       },

@@ -9,7 +9,12 @@ module.exports = (webpackManifest) => {
     },
     webpack: {
       plugins: {
-        html: { headTags = '', bodyHtmlSnippet = '', headCss = '', cssBundlePath = 'css/main.bundle.css' },
+        html: {
+          headTags = '',
+          bodyHtmlSnippet = '',
+          headCss = '',
+          cssBundlePath = 'css/main.bundle.css',
+        },
       },
     },
   } = webpackManifest

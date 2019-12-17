@@ -10,9 +10,11 @@ module.exports = (webpackManifest, mode) => {
       logo: { path },
     },
   } = webpackManifest
+  const logoPath = `${path}/logo.png`
+
   return isProd
     ? new FaviconsWebpackPlugin({
-        logo: dirPath.resolve(path),
+        logo: dirPath.resolve(logoPath),
         persistentCache: false,
         prefix: 'images/public/',
         icons: {

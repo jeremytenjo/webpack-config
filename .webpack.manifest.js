@@ -10,7 +10,7 @@ module.exports = {
       background: '#6200ee',
     },
     logo: {
-      path: './examples/react/logo.png',
+      path: './examples/react',
     },
   },
   webpack: {

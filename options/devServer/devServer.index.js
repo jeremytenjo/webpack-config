@@ -27,7 +27,11 @@ module.exports = (webpackManifest) => {
       console.clear()
       console.log(chalk.yellow(`You can now view your app in the browser.`))
       console.log()
-      console.log(`  ${chalk.cyanBright('On Your Network:')}  http://${host}:${chalk.cyanBright(port)}/`)
+      console.log(
+        `  ${chalk.cyanBright('On Your Network:')}  http://${host}:${chalk.cyanBright(
+          port,
+        )}/`,
+      )
       console.log()
       console.log(chalk.cyan('Note that the development build is not optimized.'))
       console.log(chalk.cyan(`To create a production build, use yarn build`))
