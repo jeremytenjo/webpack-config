@@ -17,17 +17,19 @@ module.exports = (webpackManifest, mode) => {
         logo: dirPath.resolve(logoPath),
         persistentCache: false,
         prefix: 'images/public/',
-        icons: {
-          android: false,
-          appleIcon: false,
-          appleStartup: false,
-          coast: false,
-          favicons: true,
-          firefox: false,
-          opengraph: false,
-          twitter: false,
-          yandex: false,
-          windows: false,
+        favicons: {
+          icons: {
+            android: false,
+            appleIcon: false,
+            appleStartup: false,
+            coast: false,
+            favicons: true,
+            firefox: false,
+            opengraph: false,
+            twitter: false,
+            yandex: false,
+            windows: false,
+          },
         },
       })
     : () => null

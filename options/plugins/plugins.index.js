@@ -7,6 +7,7 @@ const optimize_css_assets_webpack_plugin = require('./optimize-css-assets-webpac
 const brotli_webpack_plugin = require('./brotli-webpack-plugin.js')
 const robotstxt_webpack_plugin = require('./robotstxt-webpack-plugin.js')
 const script_ext_html_webpack_plugin = require('./script-ext-html-webpack-plugin')
+const favicons_webpack_plugin = require('./favicons-webpack-plugin')
 const offline_plugin = require('./offline-plugin')
 
 // Order Matters
@@ -15,6 +16,7 @@ module.exports = (webpackManifest, mode) => [
   mini_css_extract_plugin(webpackManifest, mode),
   optimize_css_assets_webpack_plugin(mode),
   html_webpack_plugin(webpackManifest, mode),
+  favicons_webpack_plugin(webpackManifest, mode),
   script_ext_html_webpack_plugin(mode),
   webpack_pwa_manifest(webpackManifest, mode),
   webpack_bundle_analyzer(mode),
