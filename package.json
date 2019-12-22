@@ -1,6 +1,6 @@
 {
   "name": "@tenjojeremy/webpack-config",
-  "version": "1.25.0",
+  "version": "1.26.0",
   "description": "Webpack Setup",
   "license": "ISC",
   "repository": {
@@ -17,7 +17,7 @@
     "build": "webpack-scripts build",
     "build:analyze": "webpack --config ./configs/config.project.js -p && webpack-bundle-analyzer --port 4200 build/stats.json",
     "deploy:firebase": "yarn build && firebase deploy",
-    "deploy": "yarn publish --minor && gpush && yarn deploy:firebase",
+    "deploy": "yarn publish --minor && gpush && npm run deploy:firebase",
     "publish:mayor": "yarn publish --mayor && gpush",
     "pretty": "prettier \"**/*.js\" --write",
     "lint": "eslint ./",
