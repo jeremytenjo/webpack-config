@@ -56,10 +56,8 @@
     "css-loader": "^3.0.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
-    "favicons-webpack-plugin": "^1.0.2",
     "file-loader": "^4.0.0",
     "get-my-local-ip": "^0.1.16",
-    "html-beautify-webpack-plugin": "^1.0.5",
     "html-loader": "^0.5.5",
     "html-webpack-exclude-assets-plugin": "^0.0.7",
     "html-webpack-plugin": "^4.0.0-beta.5",
@@ -88,7 +86,6 @@
     "webpack-cli": "^3.3.4",
     "webpack-dev-server": "^3.7.2",
     "webpack-node-externals": "^1.7.2",
-    "webpack-pwa-manifest": "^4.0.0",
-    "workbox-webpack-plugin": "^4.3.0"
+    "webpack-pwa-manifest": "^4.0.0"
   }
 }

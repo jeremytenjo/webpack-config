@@ -8,6 +8,7 @@ module.exports = (mode) => {
         publicPath: '/',
         appShell: '/',
         externals: ['/'],
+        caches: '^*.map*',
       })
     : () => null
 }
