@@ -1,5 +1,3 @@
-const localIp = require('get-my-local-ip')
-
 module.exports = {
   projectInfo: {
     name: 'Webpack Config',
@@ -16,7 +14,6 @@ module.exports = {
   webpack: {
     devServer: {
       port: 3001,
-      host: localIp.address,
     },
     entry: './examples/react/index',
     plugins: {
