@@ -8,7 +8,7 @@ module.exports = (mode) => {
         publicPath: '/',
         appShell: '/',
         externals: ['/'],
-        excludes: ['**/*.map', '**/*.br', '/^(?!\\/__).*/'],
+        excludes: ['**/*.map', '**/*.br'],
       })
     : () => null
 }
