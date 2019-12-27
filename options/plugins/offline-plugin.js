@@ -1,4 +1,4 @@
-var OfflinePlugin = require('offline-plugin')
+const OfflinePlugin = require('offline-plugin')
 
 module.exports = (mode) => {
   const isProd = mode === 'production'
@@ -6,7 +6,6 @@ module.exports = (mode) => {
   return isProd
     ? new OfflinePlugin({
         publicPath: '/',
-        appShell: '/',
         externals: ['/'],
         excludes: ['**/*.map', '**/*.br', '*/__/auth*/**'],
       })
