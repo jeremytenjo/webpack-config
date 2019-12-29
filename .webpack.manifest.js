@@ -27,10 +27,6 @@ module.exports = {
            }
            </style>`,
       },
-      workbox: {
-        swSrc: './examples/react/ServiceWorker/sw.js',
-        swDest: 'sw.js',
-      },
     },
   },
 }
