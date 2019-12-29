@@ -27,6 +27,7 @@ module.exports = {
            }
            </style>`,
       },
+      copy_webpack_plugin: [],
     },
   },
 }

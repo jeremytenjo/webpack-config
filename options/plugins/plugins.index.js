@@ -2,6 +2,7 @@ const mini_css_extract_plugin = require('./mini-css-extract-plugin.js')
 const html_webpack_plugin = require('./html-webpack-plugin.js')
 const webpack_pwa_manifest = require('./webpack-pwa-manifest.js')
 const clean_webpack_plugin = require('./clean-webpack-plugin.js')
+const copy_webpack_plugin = require('./copy-webpack-plugin.js')
 const webpack_bundle_analyzer = require('./webpack-bundle-analyzer.js')
 const optimize_css_assets_webpack_plugin = require('./optimize-css-assets-webpack-plugin.js')
 const brotli_webpack_plugin = require('./brotli-webpack-plugin.js')
@@ -13,6 +14,7 @@ const offline_plugin = require('./offline-plugin')
 // Order Matters
 module.exports = (webpackManifest, mode) => [
   clean_webpack_plugin(mode),
+  copy_webpack_plugin(webpackManifest, mode),
   mini_css_extract_plugin(webpackManifest, mode),
   optimize_css_assets_webpack_plugin(mode),
   html_webpack_plugin(webpackManifest, mode),

@@ -89,11 +89,7 @@ exports.manifest = {
     plugins: {
       html: {
         bodyHtmlSnippet: '',
-      },
-      workbox: {
-        swSrc: './tests/ServiceWorker/sw.js',
-        swDest: 'sw.js',
-      },
+      },      
     },
   },
 }
