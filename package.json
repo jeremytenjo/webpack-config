@@ -88,6 +88,7 @@
     "webpack-cli": "^3.3.4",
     "webpack-dev-server": "^3.7.2",
     "webpack-node-externals": "^1.7.2",
-    "webpack-pwa-manifest": "^4.0.0"
+    "webpack-pwa-manifest": "^4.0.0",
+    "workbox-webpack-plugin": "^4.3.1"
   }
 }
