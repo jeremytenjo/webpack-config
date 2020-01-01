@@ -5,7 +5,7 @@ module.exports = (mode) => {
 
   return isProd
     ? new OfflinePlugin({
-        // remove appshell when using firebase in order for firebase auth to work
+        appShell: '/',
         publicPath: '/',
         externals: ['/'],
         excludes: ['**/*.map', '**/*.br'],
