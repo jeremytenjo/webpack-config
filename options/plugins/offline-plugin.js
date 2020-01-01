@@ -8,7 +8,7 @@ module.exports = (mode) => {
         // remove appshell when using firebase in order for firebase auth to work
         publicPath: '/',
         externals: ['/'],
-        excludes: ['**/*.map', '**/*.br', '*/__/auth*/**'],
+        excludes: ['**/*.map', '**/*.br'],
       })
     : () => null
 }
