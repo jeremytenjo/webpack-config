@@ -47,7 +47,7 @@
   "prettier": "@tenjojeremy/prettier-config",
   "sideEffects": false,
   "dependencies": {
-    "@tenjojeremy/babel-config": "^1.4.0",
+    "@tenjojeremy/babel-config": "^1.12.0",
     "@tenjojeremy/eslint-config": "1.7.0",
     "@tenjojeremy/prettier-config": "^0.4.0",
     "brotli-webpack-plugin": "^1.1.0",
