@@ -7,7 +7,7 @@ module.exports = (mode) => {
     ? new GenerateSW({
         exclude: [/\.map$/, /\.br$/],
         // for single page apps
-        navigateFallback: '/',
+        navigateFallback: '/index.html',
         // exclude firebase namespace pages
         navigateFallbackWhitelist: [/^(?!\/__).*/],
       })
