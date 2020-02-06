@@ -1,7 +1,7 @@
 #### Installation
 
 ```sh
-yarn add @tenjojeremy/webpack-config
+npm i @tenjojeremy/webpack-config
 ```
 
 Create `.webpack.manifest.js` to root
@@ -27,19 +27,19 @@ Add to `Package.json`
 Start development
 
 ```sh
-yarn start
+npm run start
 ```
 
 Create Build
 
 ```sh
-yarn build
+npm run build
 ```
 
 Analyze Build
 
 ```sh
-yarn analyze
+npm run analyze
 ```
 
 #### Add hot module reloading (HMR)
@@ -47,7 +47,7 @@ yarn analyze
 Install:
 
 ```sh
-yarn add react-hot-loader
+npm i react-hot-loader
 ```
 
 Add to index component, replace `IndexComp` as nessesary:
