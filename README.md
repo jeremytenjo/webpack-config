@@ -42,7 +42,7 @@ Analyze Build
 yarn analyze
 ```
 
-### Add hot module reloading (HMR)
+#### Add hot module reloading (HMR)
 
 Install:
 
@@ -60,7 +60,7 @@ export default hot(IndexComp)
 
 Reference: https://github.com/gaearon/react-hot-loader
 
-### .webpack.manifest.js options example
+#### .webpack.manifest.js options example
 
 ```js
 const localIp = require('get-my-local-ip')
