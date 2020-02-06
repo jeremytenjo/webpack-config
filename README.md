@@ -1,6 +1,4 @@
-# Webpack Config
-
-## Installation
+#### Installation
 
 ```sh
 yarn add @tenjojeremy/webpack-config
@@ -24,7 +22,7 @@ Add to `Package.json`
   },
 ```
 
-## Usage with project
+#### Usage with project
 
 Start development
 
@@ -99,35 +97,35 @@ exports.manifest = {
 
 The `bin` option in the `package.json` file has a file named `webpack-scripts` and you call it in the installed app by using `yarn webpack-scripts start/build`
 
-## Bundle Performance Checklist
+### Bundle Performance Checklist
 
-### Compression
+#### Compression
 
 - Brotli
 
-### HTML
+#### HTML
 
 - Minify
 - Remove comment
 - Remove new lines
 - Remove whitespaces
 
-### Javascript
+#### Javascript
 
 - Code split pages
 - minify bundle
 - Add js tag to head with defer attribute
 
-### CSS
+#### CSS
 
 - preload css
 - add critical css to header
 
-### Images
+#### Images
 
 - Convert images to Webp
 
-### Fonts
+#### Fonts
 
 - use WOFF2 format
 - preload fonts
