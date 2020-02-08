@@ -16,9 +16,9 @@ Add to `Package.json`
 
 ```sh
   "scripts": {
-    "start": "yarn webpack-scripts start",
-    "build": "yarn webpack-scripts build",
-    "build:analyze": "yarn webpack-scripts build && yarn webpack-scripts analyze",
+    "start": "npx webpack-scripts start",
+    "build": "npx webpack-scripts build",
+    "build:analyze": "npm run build && npx webpack-scripts analyze",
   },
 ```
 

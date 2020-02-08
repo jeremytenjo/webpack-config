@@ -1,5 +1,0 @@
-# Build
-/build/*
-/examples/react/ServiceWorker/sw.js
-/node_modules/*
-

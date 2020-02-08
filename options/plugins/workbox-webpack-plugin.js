@@ -9,7 +9,7 @@ module.exports = (mode) => {
         // for single page apps
         navigateFallback: '/index.html',
         // exclude firebase namespace pages
-        navigateFallbackWhitelist: [/^(?!\/__).*/],
+        navigateFallbackAllowlist: [/^(?!\/__).*/],
       })
     : () => null
 }
