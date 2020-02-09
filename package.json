@@ -1,6 +1,6 @@
 {
   "name": "@tenjojeremy/webpack-config",
-  "version": "2.2.0",
+  "version": "2.0.0",
   "description": "Webpack Setup",
   "repository": "https://github.com/tenjojeremy/webpack-config",
   "scripts": {
@@ -9,7 +9,6 @@
     "build:analyze": "webpack --config ./configs/config.project.js -p && webpack-bundle-analyzer --port 4200 build/stats.json",
     "deploy:firebase": "npm run build && firebase deploy",
     "deploy": "npm version minor && npm publish && npm run deploy:firebase && gpush",
-    "publish:mayor": "npm publish --mayor && gpush",
     "prettify": "prettier \"**/*.js\" --write",
     "lint": "eslint ./",
     "test": "jest",
@@ -23,8 +22,7 @@
   "lint-staged": {
     "*.{js,jsx}": [
       "eslint --fix-dry-run",
-      "prettier --list-different",
-      "git add"
+      "prettier --list-different"
     ]
   },
   "bin": {
