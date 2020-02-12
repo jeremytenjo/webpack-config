@@ -1,9 +1,7 @@
-// Vendors
 import React from 'react'
 
 import { shallow } from '../enzyme'
 
-// Component
 import Comp from './comp.index'
 
 describe('Test Comp', () => {
