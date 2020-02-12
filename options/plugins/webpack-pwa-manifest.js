@@ -16,14 +16,9 @@ module.exports = (webpackManifest) => {
   } = webpackManifest
   const logoPath = `${path}/logo.png`
   const logoPathMaskable = `${path}/logo-maskable.png`
-  const maskLogo = fs.existsSync(logoPathMaskable)
-    ? {
-        src: dirPath.resolve(logoPathMaskable),
-        sizes: [144],
-        destination: dirPath.join('images', 'public'),
-        purpose: 'maskable',
-      }
-    : undefined
+  const logoPathMaskableExists = fs.existsSync(logoPathMaskable)
+  const maskLogo = logoPathMaskableExists ? logoPathMaskable : logoPath
+  const purpose = logoPathMaskableExists ? 'maskable' : 'any'
 
   return new WebpackPwaManifest({
     fingerprints: false,
@@ -43,7 +38,12 @@ module.exports = (webpackManifest) => {
         sizes: [92, 152, 180, 167, 192, 512],
         destination: dirPath.join('images', 'public'),
       },
-      maskLogo,
+      {
+        src: dirPath.resolve(maskLogo),
+        sizes: [144],
+        destination: dirPath.join('images', 'public'),
+        purpose,
+      },
     ],
   })
 }
