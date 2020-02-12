@@ -10,7 +10,7 @@ module.exports = (webpackManifest) => {
       shortName = 'Project shortName',
       colors: { background, primary },
       logo: { path },
-      share_target = {},
+      share_target,
     },
   } = webpackManifest
   const logoPath = `${path}/logo.png`
