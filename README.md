@@ -87,11 +87,15 @@ exports.manifest = {
     plugins: {
       html: {
         bodyHtmlSnippet: '',
-      },      
+      },
     },
   },
 }
 ```
+
+### Manifest
+
+if `logo-maskable` exists it will add a `142px` maskable icon to manifest
 
 #### How it works - Specs
 
