@@ -11,6 +11,7 @@ module.exports = {
       path: './examples/react',
     },
   },
+  forceInstallable: true,
   webpack: {
     devServer: {
       port: 3001,
