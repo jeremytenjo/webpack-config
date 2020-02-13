@@ -11,7 +11,9 @@ module.exports = {
       path: './examples/react',
     },
   },
-  forceInstallable: true,
+  lighthouse: {
+    tests: { installable: true },
+  },
   webpack: {
     devServer: {
       port: 3001,
