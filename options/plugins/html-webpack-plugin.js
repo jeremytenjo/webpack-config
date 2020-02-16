@@ -41,8 +41,8 @@ module.exports = (webpackManifest) => {
      <link rel="apple-touch-icon" sizes="152x152" href="images/public/icon_152x152.png">
      <link rel="apple-touch-icon" sizes="180x180" href="images/public/icon_180x180.png">
      <link rel="apple-touch-icon" sizes="167x167" href="images/public/icon_167x167.png">
-     <link rel="preload" href="/${cssBundlePath}" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript>
-     <link rel="stylesheet" href="/${cssBundlePath}"></noscript>
+     <link rel="preload" href="/${cssBundlePath}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+     <noscript><link rel="stylesheet" href="/${cssBundlePath}"></noscript>
      ${headTags}
      ${headCss}
      `,
