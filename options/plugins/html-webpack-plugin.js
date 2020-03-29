@@ -26,6 +26,7 @@ module.exports = (webpackManifest) => {
     filename: './index.html',
     inject: 'head',
     appMountId: 'root',
+    bodyHtmlSnippet,
     headHtmlSnippet: `
      <meta charset="utf-8" />
 		 <title>${name}</title>
@@ -46,8 +47,5 @@ module.exports = (webpackManifest) => {
      ${headTags}
      ${headCss}
      `,
-    bodyHtmlSnippet: `
-    ${bodyHtmlSnippet}<noscript>You need to enable JavaScript to run this app.</noscript>
-    `,
   })
 }
