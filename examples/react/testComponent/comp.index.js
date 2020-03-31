@@ -1,8 +1,10 @@
 import React from 'react'
+import Typography from '@tenjojeremy/web-toolkit/dataDisplay/typography'
 import { hot } from 'react-hot-loader/root'
+
 const Comp = () => (
   <div>
-    <span>Working!</span>
+    <Typography text='Working!' />
   </div>
 )
 

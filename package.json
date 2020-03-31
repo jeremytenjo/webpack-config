@@ -77,6 +77,7 @@
     "workbox-webpack-plugin": "^5.0.0"
   },
   "devDependencies": {
+    "@tenjojeremy/web-toolkit": "^6.70.0",
     "@tenjojeremy/eslint-config": "1.7.0",
     "@tenjojeremy/prettier-config": "^0.4.0",
     "react": "^16.12.0",
