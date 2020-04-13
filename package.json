@@ -40,7 +40,7 @@
   ],
   "sideEffects": false,
   "dependencies": {
-    "@tenjojeremy/babel-config": "^1.14.0",
+    "@tenjojeremy/babel-config": "^1.15.0",
     "brotli-webpack-plugin": "^1.1.0",
     "chrome-launcher": "^0.12.0",
     "clean-webpack-plugin": "^3.0.0",
